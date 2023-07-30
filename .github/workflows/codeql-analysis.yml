@@ -2,8 +2,12 @@ name: "CodeQL Scan"
 
 on:
   push:
+    branches: [main]
   pull_request:
-
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.txt'
 jobs:
   analyze:
     name: Analyze
